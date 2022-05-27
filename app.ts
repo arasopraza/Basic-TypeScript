@@ -1,15 +1,15 @@
-function add(n1: number, n2: number, showResult: boolean, pharase: string) {
-  const result = n1 + n2;
-  if (showResult) {
-    console.log(pharase + result);
+function combine(input1: number | string, input2: number | string) {
+  let result
+  if (typeof input1 === 'number' && typeof input2 === 'number') {
+    result = input1 + input2;
   } else {
-    return result
+    result = input1.toString() + input2.toString();
   }
+  return result;
 }
 
-const numberOne = 5;
-const numberTwo = 28;
-const printResult = true;
-const resultPharase = 'Result is : ';
+const combineAges = combine(10, 12);
+console.log(combineAges);
 
-add(numberOne, numberTwo, printResult, resultPharase);
+const combineNames = combine("aras", "opraza");
+console.log(combineNames);
